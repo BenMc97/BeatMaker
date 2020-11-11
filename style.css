@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial, sans-serif;
+  background: #dcdcdc;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.kick-pad {
+  background: rgb(105, 105, 173);
+}
+
+.snare-pad {
+  background: rgb(150, 114, 173);
+}
+
+.hihat-pad {
+  background: rgb(185, 112, 83);
+}
+
+.kick-pad.active {
+  background: rgb(8, 8, 221);
+}
+
+.snare-pad.active {
+  background: rgb(140, 3, 231);
+}
+
+.hihat-pad.active {
+  background: rgb(238, 72, 6);
+}
+
+.sequencer {
+  display: flex;
+  min-height: 47rem;
+  min-width: 90rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0rem 2rem;
+  max-width: 25%;
+}
+
+.controls h1 {
+  color: #0e3742;
+}
+
+.controls button {
+  padding: 1rem;
+  border: none;
+  background: grey;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.pad {
+  margin: 10px;
+  justify-content: center;
+  transition: all 0.5s ease;
+  border-radius: 10px;
+}
+
+.play {
+  box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+    inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: #f3f0f1;
+  color: #777777;
+  border: 0.1rem solid #dcdcdc;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 2rem;
+  outline: none;
+}
+
+select {
+  padding: 0.3rem;
+  font-size: 0.8rem;
+  outline: none;
+  border-radius: 20px;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+.mute {
+  outline: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+.mute.active {
+  background: rgb(182, 179, 179);
+}
+
+.tempo {
+  margin: 1rem;
+  width: 30%;
+}
+
+.tempo-slider {
+  padding: 0.01rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  background: #ededed;
+  cursor: pointer;
+  border-radius: 2rem;
+  outline: none;
+  border: 0.1rem solid rgb(210, 207, 221);
+}
+
+.tempo p {
+  font-size: 1rem;
+  color: #0e3742;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.volume-slider {
+  display: flex;
+  height: 0.4rem;
+  -webkit-appearance: none;
+  padding: 0.01rem;
+  width: 5rem;
+  position: absolute;
+  cursor: pointer;
+  outline: none;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  background: grey;
+  border: 0.12rem solid rgb(210, 207, 221);
+  border-radius: 2rem;
+}
+
+.volume-slider.kick {
+  left: 2rem;
+  top: 12.1rem;
+}
+
+.volume-slider.snare {
+  left: 2rem;
+  top: 21.3rem;
+}
+
+.volume-slider.hihat {
+  left: 2rem;
+  top: 31rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 1rem;
+  color: #0e3742;
+  text-transform: upper-case;
+  -webkit-box-reflect: below 0rem linear-gradient(transparent, #0004);
+  outline: none;
+  width: 100%;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
