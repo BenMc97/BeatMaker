@@ -143,23 +143,6 @@ class DrumKit{
         }
         
     }
-    saveSessionColor(){
-        let style = window.getComputedStyle(document.body, null);
-        let backgroundColor=style.backgroundColor;
-        localStorage.setItem('currentColor', backgroundColor);
-        console.log(localStorage);
-    }
-    setSessionColor(){
-        let color = localStorage.getItem('currentColor');
-        if(color!==null){
-            document.body.style.backgroundColor=color;
-        }
-        else{
-            document.body.style.backgroundColor='pink';
-        }
-        console.log('hey');
-        console.log(localStorage);
-    }
     
 }
 
@@ -207,24 +190,6 @@ drumKit.volumeSlider.forEach(input =>{
         drumKit.updateVolume(e);
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
