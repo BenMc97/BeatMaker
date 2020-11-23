@@ -151,8 +151,6 @@ const drumKit = new DrumKit();
 
 //Event listeners
 
-drumKit.saveSessionColor();
-
 drumKit.pads.forEach(pads => {
     pads.addEventListener('click',drumKit.activePad);
     pads.addEventListener('animationend', function(){
